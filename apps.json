@@ -2,8 +2,8 @@
   {
     "name": "Forge",
     "url": "https://freshbitesfoodswh.github.io/forge/",
-    "desc": "AI app builder \u2014 describe it, preview it, ship it.",
-    "icon": "\u2692\ufe0f",
+    "desc": "AI app builder — describe it, preview it, ship it.",
+    "icon": "⚒️",
     "canvas": true,
     "version": "0.3.0"
   },
@@ -11,17 +11,26 @@
     "name": "Room Scanner",
     "url": "https://freshbitesfoodswh.github.io/room-scanner/",
     "desc": "Measure a room and draw a floor plan with dimensions.",
-    "icon": "\ud83d\udcd0",
+    "icon": "📐",
     "canvas": true,
     "version": "1.2.0"
   },
   {
     "name": "Normies Awakening Journal",
     "url": "https://freshbitesfoodswh.github.io/journal/",
-    "desc": "365-style guided journal \u2014 daily prompts, private entries, freeform Canvas.",
-    "icon": "\ud83d\udcd3",
+    "desc": "365-style guided journal — daily prompts, private entries, freeform Canvas.",
+    "icon": "📓",
     "canvas": true,
     "version": "1.1.0",
     "featured": true
+  },
+  {
+    "name": "Teri's Job Search Tracker",
+    "url": "https://cursor.com/canvas/store-dde1ed7e-ecd4-4c76-919e-0b92e81631df/fdf1da89-05a3-4fde-85df-52c9d4a7ff58",
+    "desc": "Live job-search dashboard you can edit on the fly.",
+    "icon": "📋",
+    "canvas": true,
+    "bot": "job search",
+    "botId": "7e95bd3e-e016-444c-bcfa-a60d2564bf0f"
   }
 ]

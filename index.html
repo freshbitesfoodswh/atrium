@@ -17,7 +17,7 @@ h2{margin:0;font-size:19px}.card p{margin:0;opacity:.7;font-size:14px;flex:1}
 .badges{display:flex;gap:6px;flex-wrap:wrap}
 .badge{font-size:11px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 8px;border:1px solid rgba(124,247,255,.35);color:#7cf7ff}
 .badge.canvas{background:rgba(164,107,255,.2);border-color:rgba(164,107,255,.5);color:#e0c3ff}
-a.btn{display:block;text-align:center;padding:12px;border-radius:12px;text-decoration:none;color:#070a14;font-weight:600;background:linear-gradient(90deg,#7cf7ff,#a46bff)}
+a.bot{color:#7cf7ff;text-decoration:none;font-size:13px;text-align:center;opacity:.9}a.btn{display:block;text-align:center;padding:12px;border-radius:12px;text-decoration:none;color:#070a14;font-weight:600;background:linear-gradient(90deg,#7cf7ff,#a46bff)}
 #app{display:none}
 </style>
 <script src="auth-config.js"></script>
@@ -46,7 +46,8 @@ AtriumAuth.mountGate({
         <h2>${x.name}</h2>
         <div class="badges">${x.canvas?'<span class="badge canvas">Canvas mode</span>':''}${x.version?`<span class="badge">v${x.version}</span>`:''}</div>
         <p>${x.desc}</p>
-        <a class="btn" href="${x.url}">Open</a>
+        ${x.bot&&x.botId?`<a class="bot" href="grokbot://app/v1/agent?id=${x.botId}">Talk to ${x.bot}</a>`:''}
+        <a class="btn" href="${x.url}"${x.url.includes('cursor.com/canvas')?' target="_blank" rel="noopener"':''}>Open</a>
       </div>`).join('');
     });
   }
