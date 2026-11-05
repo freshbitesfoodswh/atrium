@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Changelog — The Atrium</title>
+<style>
+body{margin:0;font-family:system-ui,sans-serif;color:#e8f1ff;background:radial-gradient(circle at 20% 0,#1b2a55,transparent 50%),#070a14;padding:24px}
+a{color:#7cf7ff}h1{font-weight:300;letter-spacing:.2em;text-transform:uppercase;background:linear-gradient(90deg,#7cf7ff,#a46bff);-webkit-background-clip:text;color:transparent}
+.item{background:rgba(255,255,255,.06);border:1px solid rgba(124,247,255,.18);border-radius:14px;padding:14px 16px;margin:10px 0}
+.v{color:#7cf7ff;font-weight:700}.d{opacity:.55;font-size:13px;margin-left:8px}.app{opacity:.8;font-size:13px}
+</style></head><body>
+<p><a href="./">← The Atrium</a></p>
+<h1>Changelog</h1>
+<p style="opacity:.65">Every iteration we ship. Semver + date (America/Chicago).</p>
+<div id="list">Loading…</div>
+<script>
+fetch('versions.json',{cache:'no-store'}).then(r=>r.json()).then(rows=>{
+  list.innerHTML=rows.map(x=>`<div class="item"><span class="v">v${x.version}</span><span class="d">${x.date}</span>
+  <div class="app">${x.app}</div><div>${x.notes}</div></div>`).join('');
+});
+</script>
+</body></html>
