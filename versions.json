@@ -1,9 +1,56 @@
 [
-  {"app":"The Atrium","version":"1.1.0","date":"2026-11-04","notes":"Google allowlist login, Changelog page, Journal tile, canvas badges on every build"},
-  {"app":"Normies Awakening Journal","version":"1.0.0","date":"2026-11-04","notes":"First interactive web journal + Canvas mode (text, stickies, stickers, draw, images)"},
-  {"app":"Room Scanner","version":"1.1.0","date":"2026-11-04","notes":"Canvas mode: furniture stickers, notes, ink, plan snapshots"},
-  {"app":"Forge","version":"0.2.0","date":"2026-11-04","notes":"Canvas board: infinite pan/zoom, frames from sections, stickies, draw"},
-  {"app":"The Atrium","version":"1.0.0","date":"2026-11-04","notes":"Hub launch with Forge and Room Scanner"},
-  {"app":"Room Scanner","version":"1.0.0","date":"2026-11-04","notes":"Initial floor-plan measurer"},
-  {"app":"Forge","version":"0.1.0","date":"2026-11-02","notes":"Initial app builder on GitHub Pages"}
+  {
+    "app": "The Atrium",
+    "version": "1.1.1",
+    "date": "2026-11-04",
+    "notes": "Journal v1.0.1 canvas day-sync fix"
+  },
+  {
+    "app": "Normies Awakening Journal",
+    "version": "1.0.1",
+    "date": "2026-11-04",
+    "notes": "Canvas shows current day prompts + entries as editable blocks; Back to Journal keeps text"
+  },
+  {
+    "app": "The Atrium",
+    "version": "1.1.0",
+    "date": "2026-11-04",
+    "notes": "Google allowlist login, Changelog page, Journal tile, canvas badges on every build"
+  },
+  {
+    "app": "Normies Awakening Journal",
+    "version": "1.0.0",
+    "date": "2026-11-04",
+    "notes": "First interactive web journal + Canvas mode (text, stickies, stickers, draw, images)"
+  },
+  {
+    "app": "Room Scanner",
+    "version": "1.1.0",
+    "date": "2026-11-04",
+    "notes": "Canvas mode: furniture stickers, notes, ink, plan snapshots"
+  },
+  {
+    "app": "Forge",
+    "version": "0.2.0",
+    "date": "2026-11-04",
+    "notes": "Canvas board: infinite pan/zoom, frames from sections, stickies, draw"
+  },
+  {
+    "app": "The Atrium",
+    "version": "1.0.0",
+    "date": "2026-11-04",
+    "notes": "Hub launch with Forge and Room Scanner"
+  },
+  {
+    "app": "Room Scanner",
+    "version": "1.0.0",
+    "date": "2026-11-04",
+    "notes": "Initial floor-plan measurer"
+  },
+  {
+    "app": "Forge",
+    "version": "0.1.0",
+    "date": "2026-11-02",
+    "notes": "Initial app builder on GitHub Pages"
+  }
 ]
