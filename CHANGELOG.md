@@ -1,5 +1,10 @@
 # Changelog — The Atrium
 
+## 1.2.0 — 2026-11-04 (America/Chicago)
+- Ask Jedi Bot panel on every Atrium build (collapsible right rail)
+- Change requests capture app, page, signed-in email, timestamp; optional screenshot
+- Request history kept in localStorage with status
+
 ## 1.1.1 — 2026-11-04 (America/Chicago)
 - Journal tile bumped to v1.0.1 (canvas keeps day prompts/entries; Back to Journal)
 

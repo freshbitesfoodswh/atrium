@@ -5,7 +5,7 @@
     "desc": "AI app builder \u2014 describe it, preview it, ship it.",
     "icon": "\u2692\ufe0f",
     "canvas": true,
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   {
     "name": "Room Scanner",
@@ -13,7 +13,7 @@
     "desc": "Measure a room and draw a floor plan with dimensions.",
     "icon": "\ud83d\udcd0",
     "canvas": true,
-    "version": "1.1.0"
+    "version": "1.2.0"
   },
   {
     "name": "Normies Awakening Journal",
@@ -21,7 +21,7 @@
     "desc": "365-style guided journal \u2014 daily prompts, private entries, freeform Canvas.",
     "icon": "\ud83d\udcd3",
     "canvas": true,
-    "version": "1.0.1",
+    "version": "1.1.0",
     "featured": true
   }
 ]
