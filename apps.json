@@ -1,52 +1,173 @@
-[
-  {
-    "name": "Forge",
-    "url": "https://freshbitesfoodswh.github.io/forge/",
-    "desc": "AI app builder — describe it, preview it, ship it.",
-    "icon": "⚒️",
-    "canvas": true,
-    "version": "0.3.0"
-  },
-  {
-    "name": "Room Scanner",
-    "url": "https://freshbitesfoodswh.github.io/room-scanner/",
-    "desc": "Measure a room and draw a floor plan with dimensions.",
-    "icon": "📐",
-    "canvas": true,
-    "version": "1.2.0"
-  },
-  {
-    "name": "Normies Awakening Journal",
-    "url": "https://freshbitesfoodswh.github.io/journal/",
-    "desc": "365-style guided journal — daily prompts, private entries, freeform Canvas.",
-    "icon": "📓",
-    "canvas": true,
-    "version": "1.1.0",
-    "featured": true
-  },
-  {
-    "name": "Teri's Job Search Tracker",
-    "url": "https://cursor.com/canvas/store-dde1ed7e-ecd4-4c76-919e-0b92e81631df/fdf1da89-05a3-4fde-85df-52c9d4a7ff58",
-    "desc": "Live job-search dashboard you can edit on the fly.",
-    "icon": "📋",
-    "canvas": true,
-    "bot": "job search",
-    "botId": "7e95bd3e-e016-444c-bcfa-a60d2564bf0f"
-  },
-  {
-    "name": "Teri's Quilt Designer",
-    "url": "https://teri-quilt-designer.netlify.app",
-    "desc": "Design quilt blocks with your fabrics and get color suggestions.",
-    "icon": "🧵",
-    "canvas": false,
-    "version": "1.0.0"
-  },
-  {
-    "name": "Grow Little Roots",
-    "url": "https://growlittleroots.com",
-    "desc": "The Little Roots daycare website.",
-    "icon": "🌱",
-    "canvas": false,
-    "version": "1.0.0"
-  }
-]
+{
+  "_howToAdd": "Add an object to projects or dashboards. Required project fields: id, name, url, icon, desc. Optional: nav, tagline, version, canvas, featured, bot, botId. Dashboards need id, name, nav, desc and either url or editions: [{id, label, date, url, summary, newest}]. Set shortcut: true to pin a dashboard in the sidebar. Set attention: true for a gold attention cue. Skip keys that start with _.",
+  "projects": [
+    {
+      "id": "little-roots",
+      "name": "Grow Little Roots",
+      "nav": "Daycare site",
+      "tagline": "The Little Roots daycare website",
+      "desc": "The Little Roots daycare website.",
+      "url": "https://growlittleroots.com",
+      "icon": "tiles/little-roots.png",
+      "canvas": false,
+      "version": "1.0.0"
+    },
+    {
+      "id": "journal",
+      "name": "Normies Awakening Journal",
+      "nav": "Journal",
+      "tagline": "A little space to look inward",
+      "desc": "365-style guided journal \u2014 daily prompts, private entries, freeform Canvas.",
+      "url": "https://freshbitesfoodswh.github.io/journal/",
+      "icon": "tiles/journal.png",
+      "canvas": true,
+      "version": "1.1.0",
+      "featured": true
+    },
+    {
+      "id": "rocky-top-reef",
+      "name": "Everleigh's Rocky Top Reef",
+      "nav": "Tutor",
+      "tagline": "Make room for discovery",
+      "desc": "A joyful, shame-free reef adventure that builds early reading and math skills.",
+      "url": "https://freshbitesfoodswh.github.io/rocky-top-reef/",
+      "icon": "tiles/rocky-top-reef.png",
+      "canvas": true
+    },
+    {
+      "id": "quilt-designer",
+      "name": "Teri's Quilt Designer",
+      "nav": "Quilt Designer",
+      "tagline": "Design with your fabrics",
+      "desc": "Design quilt blocks with your fabrics and get color suggestions.",
+      "url": "https://teri-quilt-designer.netlify.app",
+      "icon": "tiles/quilt.png",
+      "canvas": false,
+      "version": "1.0.0"
+    },
+    {
+      "id": "forge",
+      "name": "Forge",
+      "nav": "Forge",
+      "tagline": "Your app-building workspace",
+      "desc": "AI app builder \u2014 describe it, preview it, ship it.",
+      "url": "https://freshbitesfoodswh.github.io/forge/",
+      "icon": "tiles/forge.png",
+      "canvas": true,
+      "version": "0.3.0"
+    },
+    {
+      "id": "room-scanner",
+      "name": "Room Scanner",
+      "nav": "Room Scanner",
+      "tagline": "See the shape of your space",
+      "desc": "Measure a room and draw a floor plan with dimensions.",
+      "url": "https://freshbitesfoodswh.github.io/room-scanner/",
+      "icon": "tiles/room-scanner.png",
+      "canvas": true,
+      "version": "1.2.0"
+    }
+  ],
+  "dashboards": [
+    {
+      "id": "job",
+      "name": "Job Search Tracker",
+      "nav": "Job",
+      "group": "job",
+      "desc": "Live job-search dashboard you can edit on the fly.",
+      "summary": "Your live job-search tracker. Open it to review applications, follow-ups, and next steps.",
+      "shortcut": true,
+      "canvas": true,
+      "bot": "job search",
+      "botId": "7e95bd3e-e016-444c-bcfa-a60d2564bf0f",
+      "editions": [
+        {
+          "id": "current",
+          "label": "Current tracker",
+          "date": "Live",
+          "newest": true,
+          "url": "https://cursor.com/canvas/store-dde1ed7e-ecd4-4c76-919e-0b92e81631df/fdf1da89-05a3-4fde-85df-52c9d4a7ff58",
+          "summary": "The current Job Search Tracker canvas."
+        }
+      ]
+    },
+    {
+      "id": "trading",
+      "name": "Trading",
+      "nav": "Trading",
+      "group": "trading",
+      "desc": "Paper trading, research notes, and backtest views.",
+      "summary": "Trading views, newest first. No live figures are invented here \u2014 open a view to see its own numbers.",
+      "canvas": true,
+      "editions": [
+        {
+          "id": "paper",
+          "label": "Paper Trading Dashboard",
+          "date": "Nov 10, 2026",
+          "newest": true,
+          "url": "https://cursor.com/canvas/store-dde1ed7e-ecd4-4c76-919e-0b92e81631df/3b672a11-457a-49d8-a7e4-b9a4dc3b2257",
+          "summary": "The latest paper-trading dashboard."
+        },
+        {
+          "id": "headroom",
+          "label": "Ultra headroom review",
+          "date": "Nov 9, 2026",
+          "url": "https://cursor.com/canvas/store-dde1ed7e-ecd4-4c76-919e-0b92e81631df/b969e990-584d-4dbf-a61b-040667fe703b",
+          "summary": "Research review of Ultra headroom for trading work."
+        },
+        {
+          "id": "backtest",
+          "label": "Backtest & Challenger",
+          "date": "Nov 9, 2026",
+          "url": "https://cursor.com/canvas/store-dde1ed7e-ecd4-4c76-919e-0b92e81631df/d2801df0-52a5-4904-a5ae-9a20c0fd0333",
+          "summary": "Backtest and challenger comparison view."
+        }
+      ]
+    },
+    {
+      "id": "finance",
+      "name": "Finance",
+      "nav": "Finance",
+      "group": "finance",
+      "desc": "Personal money plans, kept separate from Job Search.",
+      "summary": "Your money plans. Job Search is a separate dashboard \u2014 it is never filed under Finance.",
+      "canvas": true,
+      "editions": [
+        {
+          "id": "six-month",
+          "label": "6-Month Daily Money Plan",
+          "date": "Oct 30, 2026",
+          "newest": true,
+          "url": "https://cursor.com/canvas/store-dde1ed7e-ecd4-4c76-919e-0b92e81631df/a1826ca0-e0ad-4de2-bacb-7068246c5017",
+          "summary": "The newest personal money plan canvas."
+        },
+        {
+          "id": "money-plan",
+          "label": "Money Plan",
+          "date": "Oct 22, 2026",
+          "url": "https://cursor.com/canvas/store-dde1ed7e-ecd4-4c76-919e-0b92e81631df/1fbb2985-a18b-4b22-9978-536750bd0794",
+          "summary": "Earlier money plan canvas."
+        }
+      ]
+    },
+    {
+      "id": "little-roots-budget",
+      "name": "Little Roots Operating Budget",
+      "nav": "Daycare budget",
+      "group": "daycare",
+      "desc": "Operating budget for Little Roots.",
+      "summary": "The Little Roots operating budget. Separate from personal Finance and from Job Search.",
+      "canvas": false,
+      "editions": [
+        {
+          "id": "current",
+          "label": "Current budget",
+          "date": "Oct 24, 2026",
+          "newest": true,
+          "url": "https://little-roots-operating-budget-qp3h.pages.grok.bot/",
+          "summary": "The published Little Roots operating budget."
+        }
+      ]
+    }
+  ]
+}

@@ -1,56 +1,39 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>The Atrium</title><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg"><link rel="apple-touch-icon" href="icon-192.png"><meta name="theme-color" content="#070a14"><meta name="apple-mobile-web-app-capable" content="yes">
-<style>
-*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,sans-serif;color:#e8f1ff;background:radial-gradient(circle at 20% 0%,#1b2a55 0,transparent 50%),radial-gradient(circle at 90% 100%,#3a1b5e 0,transparent 50%),#070a14;padding:env(safe-area-inset-top) 18px 40px}
-header{text-align:center;padding:28px 0 18px;position:relative}header img{width:64px}h1{margin:10px 0 4px;font-weight:300;letter-spacing:.3em;text-transform:uppercase;background:linear-gradient(90deg,#7cf7ff,#a46bff);-webkit-background-clip:text;color:transparent}
-header p{margin:0;opacity:.6;font-size:14px}
-#userbar{position:absolute;right:0;top:12px;display:flex;gap:8px;align-items:center;font-size:12px}
-#userbar img{width:28px;height:28px;border-radius:50%}#userbar button{background:transparent;border:1px solid rgba(124,247,255,.3);color:inherit;border-radius:999px;padding:6px 10px;cursor:pointer}
-.nav{display:flex;justify-content:center;gap:12px;margin-bottom:18px}
-.nav a{color:#7cf7ff;text-decoration:none;font-size:13px;opacity:.85}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));max-width:1000px;margin:auto}
-.card{background:rgba(255,255,255,.06);border:1px solid rgba(124,247,255,.18);border-radius:20px;padding:20px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.08);display:flex;flex-direction:column;gap:10px}
-.card.featured{border-color:rgba(164,107,255,.55);box-shadow:0 0 40px -12px rgba(164,107,255,.7)}
-.ic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-size:30px;background:linear-gradient(135deg,rgba(124,247,255,.2),rgba(164,107,255,.25))}
-.ic img{width:100%;height:100%;border-radius:16px;object-fit:cover}
-h2{margin:0;font-size:19px}.card p{margin:0;opacity:.7;font-size:14px;flex:1}
-.badges{display:flex;gap:6px;flex-wrap:wrap}
-.badge{font-size:11px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 8px;border:1px solid rgba(124,247,255,.35);color:#7cf7ff}
-.badge.canvas{background:rgba(164,107,255,.2);border-color:rgba(164,107,255,.5);color:#e0c3ff}
-a.bot{color:#7cf7ff;text-decoration:none;font-size:13px;text-align:center;opacity:.9}a.btn{display:block;text-align:center;padding:12px;border-radius:12px;text-decoration:none;color:#070a14;font-weight:600;background:linear-gradient(90deg,#7cf7ff,#a46bff)}
-#app{display:none}
-</style>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Atrium</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#070F22">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="atrium.css">
 <script src="auth-config.js"></script>
 <script src="auth.js"></script>
 <script>window.JEDI_REQUEST={app:"The Atrium"};</script>
 <script src="jedi-request.js"></script>
-</head><body>
-<div id="app">
-<header>
-  <div id="userbar"></div>
-  <img src="icon.svg" alt=""><h1>The Atrium</h1><p>All our builds, one place.</p>
-</header>
-<div class="nav"><a href="changelog.html">Changelog</a></div>
-<main class="grid" id="g"></main>
+</head>
+<body>
+<div id="app" hidden>
+  <aside id="sidebar" aria-label="Workspace navigation"></aside>
+  <div class="scrim" id="scrim"></div>
+  <div class="wardrobe" id="wardrobe" hidden></div>
+  <main>
+    <div class="topbar">
+      <button type="button" class="iconbtn menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <button type="button" class="iconbtn menu-btn" id="mobileGear" aria-label="Wardrobe">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 3-1 3-3 1 1 3-2 2 2 2-1 3 3 1 1 3h6l1-3 3-1-1-3 2-2-2-2 1-3-3-1-1-3Z"/><circle cx="12" cy="12" r="3"/></svg>
+      </button>
+      <div class="crumb" id="crumb">Workspace <span>/</span><b>Projects</b></div>
+      <div class="top-actions"><a href="changelog.html">Changelog</a></div>
+    </div>
+    <div id="view"></div>
+  </main>
 </div>
-<script>
-AtriumAuth.mountGate({
-  title:'The Atrium',
-  blurb:'Sign in with Google. Invited: Teri & Tiffani Allen.',
-  onReady(u){
-    document.getElementById('app').style.display='block';
-    AtriumAuth.userBar(document.getElementById('userbar'));
-    fetch('apps.json',{cache:'no-store'}).then(r=>r.json()).then(a=>{
-      g.innerHTML=a.map(x=>`<div class="card ${x.featured?'featured':''}">
-        <div class="ic">${/[.\/]/.test(x.icon)?`<img src="${x.icon}" alt="">`:x.icon}</div>
-        <h2>${x.name}</h2>
-        <div class="badges">${x.canvas?'<span class="badge canvas">Canvas mode</span>':''}${x.version?`<span class="badge">v${x.version}</span>`:''}</div>
-        <p>${x.desc}</p>
-        ${x.bot&&x.botId?`<a class="bot" href="grokbot://app/v1/agent?id=${x.botId}">Talk to ${x.bot}</a>`:''}
-        <a class="btn" href="${x.url}"${x.url.includes('cursor.com/canvas')?' target="_blank" rel="noopener"':''}>Open</a>
-      </div>`).join('');
-    });
-  }
-});
-if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
-</script></body></html>
+<script src="atrium.js"></script>
+</body>
+</html>

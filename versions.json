@@ -1,6 +1,18 @@
 [
   {
     "app": "The Atrium",
+    "version": "2.0.0",
+    "date": "2026-11-10",
+    "notes": "v3 dashboard design: collapsible nav, Wardrobe themes, all verified project tiles and status dashboards; cache bust to atrium-v2.0.0"
+  },
+  {
+    "app": "The Atrium",
+    "version": "1.4.0",
+    "date": "2026-11-10",
+    "notes": "Added Quilt Designer and Grow Little Roots tiles"
+  },
+  {
+    "app": "The Atrium",
     "version": "1.3.0",
     "date": "2026-11-05",
     "notes": "Added Teri's Job Search Tracker tile (canvas) with job search as the talk-to bot"
