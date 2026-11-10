@@ -32,5 +32,21 @@
     "canvas": true,
     "bot": "job search",
     "botId": "7e95bd3e-e016-444c-bcfa-a60d2564bf0f"
+  },
+  {
+    "name": "Teri's Quilt Designer",
+    "url": "https://teri-quilt-designer.netlify.app",
+    "desc": "Design quilt blocks with your fabrics and get color suggestions.",
+    "icon": "🧵",
+    "canvas": false,
+    "version": "1.0.0"
+  },
+  {
+    "name": "Grow Little Roots",
+    "url": "https://growlittleroots.com",
+    "desc": "The Little Roots daycare website.",
+    "icon": "🌱",
+    "canvas": false,
+    "version": "1.0.0"
   }
 ]
